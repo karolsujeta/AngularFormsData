@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-todo-form',
@@ -8,7 +7,7 @@ import { debounceTime } from 'rxjs/internal/operators';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  modelForm: FormGroup;
+  modelForm: FormGroup=null;
 
   @Output()
   event = new EventEmitter<any>();
