@@ -1,0 +1,14 @@
+table{
+    color: #ffffff;
+    font-size: 26px;
+    border: 2px solid #9b9b9b;
+}
+
+th, td{
+    padding: 5px;
+}
+
+h1{
+    color:#ffffff;
+    font-size: 26px;
+}

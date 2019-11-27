@@ -1,0 +1,17 @@
+<h1>Formularz:</h1>
+<div>
+    <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">                                                                     
+        <label>Imię:</label><input name="firstname" formControlName="firstname"><br/>
+
+        <label>Nazwisko:</label><input name="lastname" formControlName="lastname"><br/>
+
+        <label>Kod pocztowy:</label><input name="zip" formControlName="zip"><br/>
+
+        <label>Email:</label><input name="email" formControlName="email"><br/>
+
+        <label id="sex">Kobieta</label><input type="radio" name="sex" formControlName="sex" value="kobieta" />
+        <label id="sex">Mężczyzna</label><input type="radio" name="sex" formControlName="sex" value="mężczyzna" /><br />
+
+        <button type="submit">Wyślij</button>
+    </form>
+</div>

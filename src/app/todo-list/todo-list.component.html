@@ -1,0 +1,18 @@
+<h1>Przesłane dane:</h1>
+
+<table>
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Kod pocztowy</th>
+        <th>Email</th>
+        <th>Płeć</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        <td>{{todo.firstname}}</td>
+        <td>{{todo.lastname}}</td>
+        <td>{{todo.zip}}</td>
+        <td>{{todo.email}}</td>
+        <td>{{todo.sex}}</td>
+    </tr>
+</table>

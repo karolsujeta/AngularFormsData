@@ -1,0 +1,19 @@
+h1{
+    color:#ffffff;
+    font-size: 26px;
+}
+
+label{
+    font-size: 24px;
+    color:#ffffff;
+}
+
+input{
+    margin-left: 5px;
+    width: auto;
+}
+
+button{
+    width: 100px;
+    height: 24px;
+}
