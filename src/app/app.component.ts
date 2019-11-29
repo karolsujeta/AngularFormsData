@@ -10,15 +10,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'app-forms-data';
 
-  todosList=[{
+  todosList = [{
     firstname: 'Edek',
     lastname: 'Zgredek',
     zip: '16-100',
     email: 'edekzgredek@gmail.com',
-    sex: 'man'
+    sex: 'mężczyzna'
   }];
 
-  addTodos(e){
+  addTodos(e) {
     this.todosList.push(e)
   }
 }
