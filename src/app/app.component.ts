@@ -18,7 +18,7 @@ export class AppComponent {
     sex: 'man'
   }];
 
-  addTodo(e){
+  addTodos(e){
     this.todosList.push(e)
   }
 }

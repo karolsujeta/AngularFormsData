@@ -7,7 +7,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
-  modelForm: FormGroup=null;
+  modelForm: FormGroup = null;
+
+  newfirstname: String = '';
+  newlastname: String = '';
+  newzip: String = '';
+  newemail: String = '';
+  newsex: String = '';
 
   @Output()
   event = new EventEmitter<any>();
@@ -23,7 +29,18 @@ export class TodoFormComponent implements OnInit {
     });
   }
 
-  onSubmit(form){
+  onSubmit(form) {
     console.log(form.value);
+  }
+
+  addTodo() {
+    var newElement = {
+      firstname: this.newfirstname,
+      lastname: this.newlastname,
+      zip: this.newzip,
+      email: this.newemail,
+      sex: this.newsex
+    }
+    this.event.emit(newElement);
   }
 }

@@ -1,17 +1,17 @@
 <h1>Formularz:</h1>
 <div>
     <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">                                                                     
-        <label>Imię:</label><input name="firstname" formControlName="firstname"><br/>
+        <label>Imię:</label><input name="firstname" formControlName="firstname" [(ngModel)]="newfirstname"><br/>
 
-        <label>Nazwisko:</label><input name="lastname" formControlName="lastname"><br/>
+        <label>Nazwisko:</label><input name="lastname" formControlName="lastname" [(ngModel)]="newlastname"><br/>
 
-        <label>Kod pocztowy:</label><input name="zip" formControlName="zip"><br/>
+        <label>Kod pocztowy:</label><input name="zip" formControlName="zip" [(ngModel)]="newzip"><br/>
 
-        <label>Email:</label><input name="email" formControlName="email"><br/>
+        <label>Email:</label><input name="email" formControlName="email" [(ngModel)]="newemail"><br/>
 
-        <label id="sex">Kobieta</label><input type="radio" name="sex" formControlName="sex" value="kobieta" />
-        <label id="sex">Mężczyzna</label><input type="radio" name="sex" formControlName="sex" value="mężczyzna" /><br />
+        <label id="sex">Kobieta</label><input type="radio" name="sex" formControlName="sex" value="kobieta" [(ngModel)]="newsex"/>
+        <label id="sex">Mężczyzna</label><input type="radio" name="sex" formControlName="sex" value="mężczyzna" [(ngModel)]="newsex" /><br />
 
-        <button type="submit">Wyślij</button>
+        <button (click)="addTodo()" type="submit">Wyślij</button>
     </form>
 </div>
