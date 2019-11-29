@@ -2,12 +2,16 @@
 <div>
     <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">                                                                     
         <label>Imię:</label><input name="firstname" formControlName="firstname" [(ngModel)]="newfirstname"><br/>
+        <span *ngIf="formErrors.firstname">{{ formErrors.firstname }}</span><br />
 
         <label>Nazwisko:</label><input name="lastname" formControlName="lastname" [(ngModel)]="newlastname"><br/>
+        <span *ngIf="formErrors.lastname">{{ formErrors.firstname }}</span><br />
 
         <label>Kod pocztowy:</label><input name="zip" formControlName="zip" [(ngModel)]="newzip"><br/>
+        <span *ngIf="formErrors.zip">{{ formErrors.firstname }}</span><br />
 
         <label>Email:</label><input name="email" formControlName="email" [(ngModel)]="newemail"><br/>
+        <span *ngIf="formErrors.email">{{ formErrors.firstname }}</span><br />
 
         <label id="sex">Kobieta</label><input type="radio" name="sex" formControlName="sex" value="kobieta" [(ngModel)]="newsex"/>
         <label id="sex">Mężczyzna</label><input type="radio" name="sex" formControlName="sex" value="mężczyzna" [(ngModel)]="newsex" /><br />
